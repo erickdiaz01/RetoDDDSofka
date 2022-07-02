@@ -9,4 +9,7 @@ public class ProductoId extends Identity {
 
     public ProductoId() {
     }
+    public static ProductoId of(String valor){
+        return new ProductoId(valor);
+    }
 }

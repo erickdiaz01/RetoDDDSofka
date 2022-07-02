@@ -9,4 +9,7 @@ public class FabricanteId extends Identity {
 
     public FabricanteId() {
     }
+    public static FabricanteId of(String valor){
+        return new FabricanteId(valor);
+    }
 }

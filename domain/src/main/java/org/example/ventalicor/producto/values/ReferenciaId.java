@@ -9,4 +9,7 @@ public class ReferenciaId extends Identity {
 
     public ReferenciaId() {
     }
+    public static ReferenciaId of(String valor ){
+        return  new ReferenciaId(valor);
+    }
 }

@@ -32,4 +32,9 @@ private final Integer precio;
 
         Integer precio();
     }
+
+    public Precio cambiarPrecio(String moneda,Integer precio){
+        return new Precio(moneda,precio);
+
+    }
 }

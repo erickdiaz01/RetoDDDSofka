@@ -9,4 +9,7 @@ public class CategoriaId extends Identity {
 
     public CategoriaId() {
     }
+    public static CategoriaId of(String valor){
+        return new CategoriaId(valor);
+    }
 }
