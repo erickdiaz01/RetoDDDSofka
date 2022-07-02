@@ -21,4 +21,12 @@ public class Categoria extends Entity<CategoriaId> {
     public void cambiarEmbriagante(Boolean embriaga){
         this.embriagante=embriagante.cambiarEmbriagante(embriaga);
     }
+
+    public NombreCategoria getNombreCategoria() {
+        return nombreCategoria;
+    }
+
+    public Embriagante getEmbriagante() {
+        return embriagante;
+    }
 }

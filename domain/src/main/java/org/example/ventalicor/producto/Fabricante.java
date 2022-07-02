@@ -21,4 +21,11 @@ public class Fabricante extends Entity<FabricanteId> {
         this.pais=pais.cambiarPais(nuevoPais);
     }
 
+    public NombreFabricante getNombreFabricante() {
+        return nombreFabricante;
+    }
+
+    public Pais getPais() {
+        return pais;
+    }
 }

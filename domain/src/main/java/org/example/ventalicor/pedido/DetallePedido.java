@@ -23,4 +23,12 @@ public class DetallePedido extends Entity<DetalleDePedidoId> {
     public void cambiarValorTotal(Integer valor){
         this.valorTotal=valorTotal.cambiarValor(valor);
     }
+
+    public Map<ProductoId, CantidadProductos> getLineasDeProductos() {
+        return lineasDeProductos;
+    }
+
+    public ValorTotal getValorTotal() {
+        return valorTotal;
+    }
 }

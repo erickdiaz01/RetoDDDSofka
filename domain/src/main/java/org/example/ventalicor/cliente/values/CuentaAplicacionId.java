@@ -9,4 +9,8 @@ public class CuentaAplicacionId extends Identity {
 
     public CuentaAplicacionId() {
     }
+
+    public static CuentaAplicacionId of(String s) {
+        return  new CuentaAplicacionId(s);
+    }
 }

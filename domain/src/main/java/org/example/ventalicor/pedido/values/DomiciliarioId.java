@@ -9,4 +9,8 @@ public class DomiciliarioId extends Identity {
 
     public DomiciliarioId() {
     }
+
+    public static DomiciliarioId of(String s) {
+        return  new DomiciliarioId(s);
+    }
 }

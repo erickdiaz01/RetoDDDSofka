@@ -1,16 +1,8 @@
 
-‚
-Rdomain/src/main/java/org/example/ventalicor/cliente/values/CuentaAplicacionId.java,5\b\5b1f1962f2a449effece402aa61423f2dfb9971c
-}
-Mdomain/src/main/java/org/example/ventalicor/cliente/values/MedioDePagoId.java,d\9\d9a33c6c9919d8d7f005e9fa5ad11bb7c17ce07e
-@
-business/pom.xml,d\4\d4ebdfff43bfaf86e620b416afb4835b5f67b594
 >
 domain/pom.xml,8\b\8b11330a6810846535e4b5ba2024ccfcee112862
 }
 Mdomain/src/main/java/org/example/ventalicor/cliente/values/SuscripcionId.java,d\6\d6f608328bb861a204c9d72f00173f1ff770930c
-y
-Idomain/src/main/java/org/example/ventalicor/cliente/values/ClienteId.java,0\4\04ae2e5788000e20d51a0cb5c7e247dc4af276f9
 
 Odomain/src/main/java/org/example/ventalicor/cliente/values/TipoMedioDePago.java,3\d\3ddc1560683fc977359591e9a8a5b48d1734bda9
 ‰
@@ -27,10 +19,6 @@ Idomain/src/main/java/org/example/ventalicor/cliente/values/Beneficio.java,8\a\
 Pdomain/src/main/java/org/example/ventalicor/pedido/values/CantidadProductos.java,6\4\6441a367415d88704f9a55fedf4cfaef6d04051e
 y
 Idomain/src/main/java/org/example/ventalicor/pedido/values/ValorTotal.java,7\c\7c36ff3068ef4a8827503b556fc6ad9f98993b18
-w
-Gdomain/src/main/java/org/example/ventalicor/pedido/values/PedidoId.java,c\5\c57d27c52c9cba416e39c3b923f6315c9716cf3a
-u
-Edomain/src/main/java/org/example/ventalicor/pedido/values/SedeId.java,e\a\ead1621f06d4f66b69fb675dd3fe48c2b19f5a15
 y
 Idomain/src/main/java/org/example/ventalicor/pedido/values/NombreSede.java,f\8\f865ae4e853e341332b9978a6945fd2a27a828a1
 |

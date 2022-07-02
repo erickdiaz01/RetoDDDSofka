@@ -9,4 +9,7 @@ public class SedeId extends Identity {
 
     public SedeId() {
     }
+    public static SedeId of(String valor){
+        return new SedeId(valor);
+    }
 }

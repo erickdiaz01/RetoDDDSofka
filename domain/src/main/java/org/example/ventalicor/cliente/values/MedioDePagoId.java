@@ -9,4 +9,8 @@ public class MedioDePagoId extends Identity {
 
     public MedioDePagoId() {
     }
+
+    public static MedioDePagoId of(String s) {
+        return new MedioDePagoId(s);
+    }
 }

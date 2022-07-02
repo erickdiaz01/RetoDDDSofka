@@ -16,4 +16,8 @@ public class Referencia extends Entity<ReferenciaId> {
     public void cambiarNombreReferencia(String nuevoNombre){
         this.nombreReferencia=nombreReferencia.cambiarNombre(nuevoNombre);
     }
+
+    public NombreReferencia getNombreReferencia() {
+        return nombreReferencia;
+    }
 }

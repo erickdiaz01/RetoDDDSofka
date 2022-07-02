@@ -9,4 +9,8 @@ public class PedidoId extends Identity {
 
     public PedidoId() {
     }
+
+    public static PedidoId of(String valor) {
+        return new PedidoId(valor);
+    }
 }

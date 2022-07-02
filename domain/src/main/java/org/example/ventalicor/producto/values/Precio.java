@@ -6,11 +6,11 @@ import java.util.Objects;
 
 public class Precio implements ValueObject<Precio.Props> {
 private final String moneda;
-private final Integer precio;
+private final Integer costo;
 
     public Precio(String moneda, Integer precio) {
         this.moneda =  Objects.requireNonNull(moneda);
-        this.precio =  Objects.requireNonNull(precio);
+        this.costo =  Objects.requireNonNull(precio);
     }
 
     @Override
@@ -21,8 +21,8 @@ private final Integer precio;
     return moneda;
 }
 @Override
-            public Integer precio(){
-    return precio;
+            public Integer costo(){
+    return costo;
 }
         };
     }
@@ -30,11 +30,11 @@ private final Integer precio;
     public interface Props {
         String moneda();
 
-        Integer precio();
+        Integer costo();
     }
 
-    public Precio cambiarPrecio(String moneda,Integer precio){
-        return new Precio(moneda,precio);
+    public Precio cambiarPrecio(String moneda,Integer costo){
+        return new Precio(moneda,costo);
 
     }
 }

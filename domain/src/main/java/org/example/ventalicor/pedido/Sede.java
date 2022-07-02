@@ -19,4 +19,12 @@ public class Sede extends Entity<SedeId> {
     public void cambiarNombreSede(String nombre){
         this.nombreSede=nombreSede.cambiarNombre(nombre);
     }
+
+    public DireccionSede getDireccionSede() {
+        return direccionSede;
+    }
+
+    public NombreSede getNombreSede() {
+        return nombreSede;
+    }
 }

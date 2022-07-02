@@ -18,4 +18,12 @@ public class Domiciliario extends Entity<DomiciliarioId> {
     public void cambiarTelefonoDomiciliario(String telefono){
         this.telefonoDomiciliario=telefonoDomiciliario.cambiarTelefono(telefono);
     }
+
+    public NombreDomiciliario getNombreDomiciliario() {
+        return nombreDomiciliario;
+    }
+
+    public TelefonoDomiciliario getTelefonoDomiciliario() {
+        return telefonoDomiciliario;
+    }
 }
