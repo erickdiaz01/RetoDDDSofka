@@ -43,8 +43,8 @@ public class Producto extends AggregateEvent<ProductoId> {
     public void cambiarPaisDeFabricante(FabricanteId fabricanteId,String paisFabricante){
         appendChange(new PaisDeFabricanteCambiado(fabricanteId,paisFabricante)).apply();
     }
-    public void cambiarNombreDeReferencia(ReferenciaId referenciaId,String nombreReferencia){
-        appendChange(new NombreDeReferenciaCambiado(referenciaId,nombreReferencia)).apply();
+    public void cambiarNombreDeReferencia(ProductoId productoId,ReferenciaId referenciaId,String nombreReferencia){
+        appendChange(new NombreDeReferenciaCambiado(productoId,referenciaId,nombreReferencia)).apply();
     }
 
 }

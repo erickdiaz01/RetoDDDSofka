@@ -15,7 +15,7 @@ public class Cliente extends AggregateEvent<ClienteId> {
 
     public Cliente(ClienteId clienteId, CuentaAplicacionId cuentaAplicacionId, TelefonoCliente telefonoCliente, NombreCompletoCliente nombreCompletoCliente, DirecionCliente direccionCliente,TipoSuscripcion tipoSuscripcion) {
         super(clienteId);
-        appendChange(new ClienteCreado(cuentaAplicacionId,direccionCliente,telefonoCliente,nombreCompletoCliente,tipoSuscripcion)).apply();
+        appendChange(new ClienteCreado(clienteId,cuentaAplicacionId,direccionCliente,telefonoCliente,nombreCompletoCliente,tipoSuscripcion)).apply();
         subscribe(new ClienteEventChange(this));
     }
     private Cliente(ClienteId clienteId){
@@ -28,7 +28,7 @@ public class Cliente extends AggregateEvent<ClienteId> {
         return cliente;
     }
    public void agregarMedioDePago(CuentaAplicacionId cuentaAplicacionId,MedioDePago medioDePago){
-        appendChange(new MedioDePagoAgregado(cuentaAplicacionId,medioDePago)).apply();
+        appendChange(new MedioDePagoAgregado(cuentaAplicacionId,medioDePago,mediosDePago)).apply();
    }
    public void asignarSuscripcion(CuentaAplicacionId cuentaAplicacionId,Suscripcion suscripcion){
         appendChange(new SuscripcionAsignada(cuentaAplicacionId,suscripcion)).apply();
@@ -43,5 +43,15 @@ public class Cliente extends AggregateEvent<ClienteId> {
         appendChange(new TelefonoDeClienteCambiadoApp(cuentaAplicacionId,nuevoTelefono)).apply();
    }
 
+    public CuentaAplicacion getCuentaAplicacion() {
+        return cuentaAplicacion;
+    }
 
+    public Set<MedioDePago> getMediosDePago() {
+        return mediosDePago;
+    }
+
+    public Suscripcion getSuscripcion() {
+        return suscripcion;
+    }
 }

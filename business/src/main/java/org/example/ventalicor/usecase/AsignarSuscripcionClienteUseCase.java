@@ -6,11 +6,13 @@ import co.com.sofka.business.support.ResponseEvents;
 import org.example.ventalicor.cliente.Cliente;
 import org.example.ventalicor.cliente.commands.AsignarSuscripcionCommand;
 
-public class AsignarSuscripcionCliente extends UseCase<RequestCommand<AsignarSuscripcionCommand>, ResponseEvents> {
+public class AsignarSuscripcionClienteUseCase extends UseCase<RequestCommand<AsignarSuscripcionCommand>, ResponseEvents> {
     @Override
     public void executeUseCase(RequestCommand<AsignarSuscripcionCommand> asignarSuscripcionCommandRequestCommand) {
         var command = asignarSuscripcionCommandRequestCommand.getCommand();
         var cliente = Cliente.from(command.getClienteId(),repository().getEventsBy(command.getClienteId().value()));
+cliente.asignarSuscripcion(command.getCuentaAplicacionId(),command.getSuscripcion());
+        emit().onResponse(new ResponseEvents(cliente.getUncommittedChanges()));
 
     }
 }

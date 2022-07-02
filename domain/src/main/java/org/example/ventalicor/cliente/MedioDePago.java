@@ -18,4 +18,12 @@ public class MedioDePago extends Entity<MedioDePagoId> {
     public void cambiarDatosMedioDePago(String datosMedioDePago){
         this.datosMedioDePagoDeCliente=datosMedioDePagoDeCliente.cambiarDatosMedioDePago(datosMedioDePago);
     }
+
+    public DatosMedioDePagoDeCliente getDatosMedioDePagoDeCliente() {
+        return datosMedioDePagoDeCliente;
+    }
+
+    public TipoMedioDePago getTipoMedioDePago() {
+        return tipoMedioDePago;
+    }
 }

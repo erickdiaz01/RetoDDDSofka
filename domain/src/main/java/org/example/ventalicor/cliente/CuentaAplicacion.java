@@ -24,4 +24,5 @@ public class CuentaAplicacion extends Entity<CuentaAplicacionId> {
     public void cambiarTelefonoCliente(String telefono){
         this.telefonoCliente= telefonoCliente.cambiarTelefono(telefono);
     }
+
 }

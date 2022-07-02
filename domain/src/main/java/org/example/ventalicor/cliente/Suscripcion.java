@@ -20,4 +20,12 @@ public class Suscripcion extends Entity<SuscripcionId> {
     public void cambiarTipoDeSuscripcion(String suscripcion){
         this.tipoSuscripcion=tipoSuscripcion.cambiarTipo(TipoSuscripcion.tipo.valueOf(suscripcion));
     }
+
+    public TipoSuscripcion getTipoSuscripcion() {
+        return tipoSuscripcion;
+    }
+
+    public Set<Beneficio> getBeneficios() {
+        return beneficios;
+    }
 }
