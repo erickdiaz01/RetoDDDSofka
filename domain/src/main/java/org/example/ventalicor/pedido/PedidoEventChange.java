@@ -21,7 +21,7 @@ public class PedidoEventChange extends EventChange {
             pedido.medioDePago = event.getMedioDePago();
         });
         apply((DescuentoAsignado event)->{
-            pedido.descuento= new Descuento(event.getDescuento());
+            pedido.descuento= event.getDescuento();
         });
 apply((NombreDeSedeCambiado event)->{
     pedido.sede.cambiarNombreSede(event.getNombreSede());

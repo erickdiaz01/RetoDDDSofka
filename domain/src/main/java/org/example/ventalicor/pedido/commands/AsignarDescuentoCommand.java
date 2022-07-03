@@ -1,13 +1,14 @@
 package org.example.ventalicor.pedido.commands;
 
 import co.com.sofka.domain.generic.Command;
+import org.example.ventalicor.pedido.values.Descuento;
 import org.example.ventalicor.pedido.values.PedidoId;
 
 public class AsignarDescuentoCommand extends Command {
     private final PedidoId pedidoId;
-    private final Double descuento;
+    private final Descuento descuento;
 
-    public AsignarDescuentoCommand(PedidoId pedidoId, Double descuento) {
+    public AsignarDescuentoCommand(PedidoId pedidoId, Descuento descuento) {
         this.pedidoId = pedidoId;
         this.descuento = descuento;
     }
@@ -16,7 +17,7 @@ public class AsignarDescuentoCommand extends Command {
         return pedidoId;
     }
 
-    public Double getDescuento() {
+    public Descuento getDescuento() {
         return descuento;
     }
 }

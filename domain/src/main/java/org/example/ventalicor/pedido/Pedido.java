@@ -40,7 +40,7 @@ public class Pedido extends AggregateEvent<PedidoId> {
     public void cambiarMedioDePago(PedidoId pedidoId,MedioDePago medioDePago){
         appendChange(new MedioDePagoCambiado(pedidoId,medioDePago)).apply();
     }
-    public void asignarDescuento(PedidoId pedidoId,Double descuento){
+    public void asignarDescuento(PedidoId pedidoId,Descuento descuento){
         appendChange(new DescuentoAsignado(pedidoId,descuento)).apply();
 
     }
