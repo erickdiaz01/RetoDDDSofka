@@ -15,16 +15,28 @@ public class ClienteEventChange extends EventChange {
             cliente.suscripcion=new Suscripcion(new SuscripcionId(),event.getTipoSuscripcion());
         });
         apply((MedioDePagoAgregado event)->{
+            if(event.getMediosDePago().contains(event.getMedioDePago().getDatosMedioDePagoDeCliente().value())){
+                throw new IllegalArgumentException("Ya tiene un medio de pago con estos datos");
+            }
             cliente.mediosDePago.add(event.getMedioDePago());
         });
         apply((SuscripcionAsignada event)->{
+            if(event.getCuentaAplicacionId()==null){
+                throw new IllegalArgumentException("Debe tener una cuenta creada");
+            }
             cliente.suscripcion= event.getSuscripcion();
         });
         apply((DireccionDeClienteCambiadaApp event)->{
+            if(event.getCuentaAplicacionId()==null){
+                throw new IllegalArgumentException("Debe tener una cuenta creada");
+            }
             cliente.cuentaAplicacion.cambiarDireccionCliente(event.getNuevaDireccionCliente());
 
         });
         apply((TipoDeSuscripcionCambiada event)->{
+            if(event.getSuscripcionId()==null){
+                throw new IllegalArgumentException("Debe tener una suscripcion asignada");
+            }
             cliente.suscripcion.cambiarTipoDeSuscripcion(String.valueOf(event.getNuevoTipo()));
         });
 
